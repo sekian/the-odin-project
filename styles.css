@@ -1,13 +1,13 @@
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;    
 }
 
 .dark {
     background-color: #1F2937;
     color: white;
 }
-
 .light {
     background-color: white;
 }
@@ -15,86 +15,194 @@ body {
     background-color: #E5E7EB;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+
+/* Navigation bar and Main content */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 16px 64px 16px;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0px 20px 100px;
-    align-items: center;
     color: #F9FAF8;
-    padding: 20px 0px 20px 100px;
-    align-items: center;
 }
 
 .header-links {
     display: flex;
-    margin-left: auto;
-    padding: 0px 100px 0px 0px;  
+    gap: 16px;
 }
 
+.main-content .secondary-text,
 .header-links a {
-    text-decoration: none;
-    color: #E5E7EB;
     font-size: 18px;
-    padding: 10px;
+    color: #E5E7EB;
+    text-decoration: none;
     font-family: 'Roboto', arial;
 }
 
 .header-logo {
-    margin-right: auto;
     font-size: 24px;
     font-weight: bold;
 }
 
-.hero {
+.main-content {
     display: flex;
     color: #F9FAF8;
     background-color: #1F2937;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 90px;
+    gap: 64px;
 }
 
-.hero-content {
+.main-content .main-info {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-right: 50px;
-    /* flex-basis: 400px; */
-    max-width: 400px;
+    max-width: 512px;
     align-items: flex-start;
-    gap: 16px;
 }
 
-.hero-content .main-text {
+.main-content .main-text {
     color: #F9FAF8;
     font-size: 48px;
     font-weight: bolder;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
 }
 
-.hero-image img {
+.main-content .main-image img {
     width: auto;
     height: 350px;
 }
 
-.hero-content .secondary-text,
-.header-links {
-    font-size: 18px;
-    color: #E5E7EB;
-}
-
-.hero button {
+button {
     text-align: center;
     border: none;
     background: #3882f6;
-    padding: 10px;
-    border-radius: 8px;
+    padding: 8px;
+    border-radius: 4px;
     color: white;
     font-family: 'Roboto', arial;
     font-weight: bold;
+}
+
+/* Information cards */
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 172px;
+}
+
+.card img {
+    width: auto;
+    border-radius: 5%;
+    border: 5px solid #3882f6;
+}
+
+.card div {
+    color:#1F2937
+}
+
+h1 {
+    text-align: center;
+    color: #1F2937;
+}
+
+.section-1, .section-2 {
+    max-width: 1280px;
+}
+
+.section-2,
+.info-container,
+.quote-content,
+.section-3,
+.call-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 16px 64px 16px;
+}
+
+/* Quote */
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1024px;
+}
+
+.quote-text {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.quote-person {
+    align-self: flex-end;
+    font-weight: bold;
+    color: #1F2937
+}
+
+/* Call to action */
+
+.section-4 {
+    background-color: #3882f6;
+    color:white;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.action-content {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up {
+    border-color: white;
+    border: 2px solid white;
+    min-width: 100px;
+}
+
+.action-text {
+    font-size: medium;
+}
+
+.action-left {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2937;
+    height: 15%;
+    color: white;
 }
