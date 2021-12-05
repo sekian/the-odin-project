@@ -34,6 +34,7 @@ clearBtn.addEventListener('click', clearCells);
 function changeSize() {
     let x = prompt("Enter a Value (min=4, max=100)", "16");
     if (x === null) return;
+    if (isNaN(x)) return;
     if (x < 4) x = 4;
     if (x > 100) x = 100;
     makeRows(x, x);
