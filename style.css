@@ -32,7 +32,7 @@ body {
     border: 0px solid #000;
 }
 
-.button {
+#buttons > * {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,8 +44,12 @@ body {
     font-size: 20px;
 }
 
-.button:hover {
+#buttons > *:hover {
     background-color: #eee;
+}
+
+#buttons > *:active {
+    background-color: #ccc;
 }
 
 .screen {
@@ -73,3 +77,10 @@ body {
     grid-column: span 4;
 }
 
+#previousOperation {
+    min-height: 32px;
+}
+
+#currentOperation {
+    min-height: 32px;
+}
