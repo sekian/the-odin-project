@@ -1,0 +1,86 @@
+:root {
+    --grid-cols: 4;
+    --grid-rows: 5;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    min-height: 500px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.calculator {
+    box-sizing: border-box;
+    width: 400px;
+    border-radius: 16px;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #aaa;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+#buttons {
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    border: 0px solid #000;
+}
+
+#buttons > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    margin: 4px;
+    border-radius: 4px;
+    border: 2px solid black;
+    font-size: 20px;
+}
+
+#buttons > *:hover {
+    background-color: #eee;
+}
+
+#buttons > *:active {
+    background-color: #ccc;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 20px;
+    background-color: white;
+    margin: 4px;
+    border-radius: 4px;
+    border: 2px solid black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.span-4 {
+    grid-column: span 4;
+}
+
+#previousOperation {
+    min-height: 32px;
+}
+
+#currentOperation {
+    min-height: 32px;
+}
